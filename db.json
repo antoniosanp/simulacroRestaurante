@@ -1,5 +1,19 @@
 {
-    "users" : [],
-    "productos" : [],
-    "ordenes" : []
+  "users": [
+    {
+      "nombre": "antonio",
+      "email": "admin@gmail.com",
+      "password": "12345",
+      "rol": "admin"
+    },
+    {
+      "id": "f944",
+      "nombre": "pedro",
+      "email": "pedro@gmail.com",
+      "password": "1",
+      "rol": "visitante"
+    }
+  ],
+  "productos": [],
+  "ordenes": []
 }
