@@ -3,6 +3,8 @@ import { registerView } from "../views/register.js";
 import { app } from "../../app.js";
 import { cerrarSesion } from "../store/auth.js";
 import { store } from "../store/store.js";
+import { navbarView } from "../components/navbar.js";
+import { menuView } from "../views/menu.js";
 
 export function router(){
 
@@ -17,7 +19,8 @@ export function router(){
 
     switch (hash) {
         case "#/login":
-            console.log("en login")
+            console.log("en login");
+            if (store.current_user) {location.hash = "#/menu"; console.log("hay usuario");return}
             app.appendChild(loginView());
             
             break;
@@ -26,21 +29,24 @@ export function router(){
             app.appendChild(registerView());
             
             break;
-
-        case "#/home":
+        case "#/navbar":
+            app.appendChild(navbarView())
+            break;
+        case "#/menu":
             console.log("en home");
-            app.append(navbar(),homeView())
+            if (!store.current_user) {location.hash = "#/login"; return}
+            app.append(navbarView(), menuView())
             break;
 
-        case "#/administrar":
-            console.log("en administrar");
-            app.append(navbar(), administrarView());
-            break;
+        // case "#/administrar":
+        //     console.log("en administrar");
+        //     app.append(navbar(), administrarView());
+        //     break;
 
-        case "#/productos":
-            console.log("en producto");
-            app.append(navbar(), productosView());
-            break;
+        // case "#/productos":
+        //     console.log("en producto");
+        //     app.append(navbar(), productosView());
+        //     break;
 
 
         case "#/logout":
@@ -51,7 +57,7 @@ export function router(){
             
         default:
             console.log("vista no encontrada");
-            app.append(navbar(), notFoundView())
+            app.append(navbarView())
             break;
     }
 
