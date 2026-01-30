@@ -5,6 +5,8 @@ import { cerrarSesion } from "../store/auth.js";
 import { store } from "../store/store.js";
 import { navbarView } from "../components/navbar.js";
 import { menuView } from "../views/menu.js";
+import { notfoundView } from "../views/notfound.js";
+import { nuevoProductoView } from "../views/administrarProducto.js";
 
 export function router(){
 
@@ -29,13 +31,15 @@ export function router(){
             app.appendChild(registerView());
             
             break;
-        case "#/navbar":
-            app.appendChild(navbarView())
-            break;
+       
         case "#/menu":
             console.log("en home");
             if (!store.current_user) {location.hash = "#/login"; return}
             app.append(navbarView(), menuView())
+            break;
+
+        case "#/productos":
+            app.append(navbarView(), nuevoProductoView());
             break;
 
         // case "#/administrar":
@@ -57,7 +61,7 @@ export function router(){
             
         default:
             console.log("vista no encontrada");
-            app.append(navbarView())
+            app.append(notfoundView())
             break;
     }
 

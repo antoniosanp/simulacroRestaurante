@@ -5,7 +5,7 @@ export const app = document.getElementById("app");
 console.log("hola")
 
 await iniciarDatos()
-
+location.hash = "#/menu"
 router();
 window.addEventListener("hashchange", router)
 

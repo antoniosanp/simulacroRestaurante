@@ -20,6 +20,13 @@
       "email": "pepe@gmail.com",
       "password": "1",
       "rol": "visitante"
+    },
+    {
+      "id": "bf6b",
+      "nombre": "juan",
+      "email": "calvito@gmail.com",
+      "password": "1",
+      "rol": "visitante"
     }
   ],
   "productos": [],
