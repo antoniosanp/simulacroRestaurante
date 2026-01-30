@@ -7,9 +7,10 @@ import { navbarView } from "../components/navbar.js";
 import { menuView } from "../views/menu.js";
 import { notfoundView } from "../views/notfound.js";
 import { nuevoProductoView } from "../views/administrarProducto.js";
+import { getCurrent_user } from "../store/auth.js";
 
 export function router(){
-
+    getCurrent_user()
     //------------------------------------------------
     const hash = location.hash;
     console.log("Router called, hash:", hash);
