@@ -1,3 +1,5 @@
+import { postProducto } from "../services/productos.sercives.js";
+import { Producto } from "../store/store.js";
 export function nuevoProductoView() {
 
     const nuevoProducto = document.createElement("section");
@@ -66,5 +68,19 @@ export function nuevoProductoView() {
         </div>
     `;
 
+    const form = nuevoProducto.querySelector("form")
+    const name = nuevoProducto.querySelector("#npNombre");
+    const precio = nuevoProducto.querySelector("#npPrecio");
+    const categoria = nuevoProducto.querySelector("#npCategoria");
+
+    form.addEventListener("submit", async (e)=>{
+
+        e.preventDefault();
+        const producto = new Producto(name.value, Number(precio.value), categoria.value)
+        const res = await postProducto(producto)
+        console.log("producto creado")
+        if (res.ok){alert("agregado correctamente")}
+        
+    })
     return nuevoProducto;
 }

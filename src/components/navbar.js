@@ -50,6 +50,10 @@ export function navbarView() {
             <ul class="navbar-nav ms-auto gap-3">
 
                 <li class="nav-item">
+                    <a class="nav-link" href="#/menu">Menú</a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="#/productos">productos</a>
                 </li>
 

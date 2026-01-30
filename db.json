@@ -29,6 +29,43 @@
       "rol": "visitante"
     }
   ],
-  "productos": [],
+  "productos": [
+    {
+      "id": "8e49",
+      "nombre": "limonada",
+      "precio": "122",
+      "categoria": "bebidas"
+    },
+    {
+      "id": "d66e",
+      "nombre": "hamburguesa doble carne",
+      "precio": "12423",
+      "categoria": "hamburguesa"
+    },
+    {
+      "id": "5267",
+      "nombre": "red velvet",
+      "precio": "4996",
+      "categoria": "postres"
+    },
+    {
+      "id": "d9cc",
+      "nombre": "hamburguesa",
+      "precio": "42",
+      "categoria": "bebidas"
+    },
+    {
+      "id": "2dd5",
+      "nombre": "10:39",
+      "precio": "2",
+      "categoria": "postres"
+    },
+    {
+      "id": "c7be",
+      "nombre": "10:43",
+      "precio": 2332,
+      "categoria": "hamburguesa"
+    }
+  ],
   "ordenes": []
 }
