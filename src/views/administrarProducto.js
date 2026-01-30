@@ -78,9 +78,10 @@ export function nuevoProductoView() {
         e.preventDefault();
         const producto = new Producto(name.value, Number(precio.value), categoria.value)
         const res = await postProducto(producto)
-        console.log("producto creado")
-        if (res.ok){alert("agregado correctamente")}
-        
+        alert("producto creado");
+        name.value = "";
+        precio.value = "";
+        categoria.value = "";
     })
     return nuevoProducto;
 }

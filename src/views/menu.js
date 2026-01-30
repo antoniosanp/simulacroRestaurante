@@ -1,3 +1,6 @@
+import { store } from "../store/store.js";
+import { productoCardAdmin } from "../components/productoCardAdmin.js";
+
 export function menuView() {
 
     const section = document.createElement("section");
@@ -32,32 +35,10 @@ export function menuView() {
             <main class="col-12 col-md-9">
                 <div class="border rounded p-3">
                     
-                    <div class="row g-3">
+                    <div  id = "grid" class="row g-3 ">
                         
                         <!-- PRODUCTO PLACEHOLDER -->
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="border rounded p-3 text-center h-100">
-                                <div class="bg-light mb-2" style="height:120px;"></div>
-                                <h6 class="mb-1">Producto</h6>
-                                <small class="text-muted">$0.00</small>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="border rounded p-3 text-center h-100">
-                                <div class="bg-light mb-2" style="height:120px;"></div>
-                                <h6 class="mb-1">Producto</h6>
-                                <small class="text-muted">$0.00</small>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="border rounded p-3 text-center h-100">
-                                <div class="bg-light mb-2" style="height:120px;"></div>
-                                <h6 class="mb-1">Producto</h6>
-                                <small class="text-muted">$0.00</small>
-                            </div>
-                        </div>
+                    
 
                     </div>
 
@@ -66,6 +47,17 @@ export function menuView() {
 
         </div>
     `;
-
+    const grid = section.querySelector("#grid");
+    renderProductosAdmin(grid)
     return section;
+}
+
+function renderProductosAdmin(divisor){
+    for (const p of store.productos.data){
+
+    divisor.appendChild(productoCardAdmin(p))
+
+
+    }
+
 }

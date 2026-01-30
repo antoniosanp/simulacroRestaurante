@@ -65,6 +65,48 @@
       "nombre": "10:43",
       "precio": 2332,
       "categoria": "hamburguesa"
+    },
+    {
+      "id": "1ad1",
+      "nombre": "a",
+      "precio": 2,
+      "categoria": "hamburguesa"
+    },
+    {
+      "id": "22ad",
+      "nombre": "prueba",
+      "precio": 24,
+      "categoria": "postres"
+    },
+    {
+      "id": "885f",
+      "nombre": "a",
+      "precio": 2,
+      "categoria": "bebidas"
+    },
+    {
+      "id": "9e9c",
+      "nombre": "23",
+      "precio": 4,
+      "categoria": "bebidas"
+    },
+    {
+      "id": "d67d",
+      "nombre": "veinte",
+      "precio": 23,
+      "categoria": "postres"
+    },
+    {
+      "id": "a4fb",
+      "nombre": "estructura",
+      "precio": 23,
+      "categoria": "hamburguesa"
+    },
+    {
+      "id": "66b6",
+      "nombre": "rr",
+      "precio": 1000,
+      "categoria": "bebidas"
     }
   ],
   "ordenes": []
