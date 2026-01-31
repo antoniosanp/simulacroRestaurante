@@ -7,7 +7,7 @@ export function orderCard(item){
         <small class="text-muted">$${item.precio}</small>
     </div>
 
-    <div class="d-flex align-items-center gap-1">
+    <div id="botonesContainer" class="d-flex align-items-center gap-1">
         <button id="restCantidad" class="btn btn-sm btn-outline-secondary">−</button>
         <span id="cantidad" class="fw-semibold">${cantidad} </span>
         <button id="addCantidad" class="btn btn-sm btn-outline-secondary">+</button>
@@ -18,14 +18,18 @@ export function orderCard(item){
     
     `
     const div = document.createElement("div");
+    div.id = "orderCard";
+    div.dataset.id = item.id;
+
     div.innerHTML = inner
    
     const restCantidad = div.querySelector("#restCantidad");
     const addCantidad = div.querySelector("#addCantidad");
-    const cantidadSpan = div.querySelector("#cantidad")
+    const cantidadSpan = div.querySelector("#cantidad");
+    
     const deleteOrder = div.querySelector("#deleteOrder");
-    deleteOrder.dataset.id = item.id
-
+    deleteOrder.dataset.id = item.id;
+    
     restCantidad.addEventListener("click", ()=>{
         if (cantidad <= 1) {return}
         cantidad --;
@@ -40,6 +44,7 @@ export function orderCard(item){
     })
 
     deleteOrder.addEventListener("click", ()=>{
+        console.log(item)
         div.remove()
     })
 

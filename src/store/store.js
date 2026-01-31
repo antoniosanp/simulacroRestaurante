@@ -50,7 +50,7 @@ export class Orden{
     }
     calcularTotal(){
         let total = 0;
-        for (const item of this.items){
+        for (const item of this.items.values()){
             total += (item.producto.precio * item.cantidad)
         }
         return total

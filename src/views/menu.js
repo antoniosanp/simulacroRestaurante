@@ -2,6 +2,9 @@ import { store } from "../store/store.js";
 import { productoCardAdmin } from "../components/productoCardAdmin.js";
 import { productoCardUser } from "../components/productoCardUser.js";
 import { orderCard } from "../components/oderCard.js";
+import { Item } from "../store/store.js";
+import { Orden } from "../store/store.js";
+import { postOrden } from "../services/ordenes.services.js";
 
 
 export function menuView() {
@@ -54,7 +57,7 @@ export function menuView() {
 }
 
     if (store.current_user.rol === "visitante"){
-        const items = new Set();
+        const items = new Map()
         
         section.innerHTML = `
         <!-- TÍTULO -->
@@ -85,7 +88,7 @@ export function menuView() {
             <!-- aquí van las cards -->
                      </div>
 
-                 <button class="btn btn-outline-primary w-100">
+                 <button id="btnAceptarOrden" class="btn btn-outline-primary w-100">
             Aceptar Orden
           </button>
 
@@ -116,39 +119,68 @@ export function menuView() {
 
     const side = section.querySelector("#order-list");
     const grid = section.querySelector("#grid");
+    const btnAceptarOrden = section.querySelector("#btnAceptarOrden");
+
+
+//eventos menu - comprar---------------------------------------------------------------
     grid.addEventListener("click", (e)=>{
         const btn = e.target
         if (btn.id === "btnComprar")
         {
-            
-            const prod = getProductById(btn.dataset.id)
+            const id = btn.dataset.id
+            const prod = getProductById(id)
             const card = orderCard(prod);
+            const item = new Item(prod,1)
 
-            if (!items.has(btn.dataset.id))
-            {side.appendChild(card)}
+            if (!items.has(id))
+            {side.appendChild(card)
 
-            items.add(btn.dataset.id);
-        }
-
-    
-    })
-
+            items.set(id, item);
+            }
+        }})
 
 
 
+// eventos sidebar--------------------------------------------------------------
     side.addEventListener("click", (e)=>{
         const btn = e.target;
         if(items.has(btn.dataset.id)) { items.delete(btn.dataset.id)}
 
+        if(e.target.id == "addCantidad") {
+            const cardId = e.target.closest("#orderCard").dataset.id;
+            items.get(cardId).cantidad += 1;
+            console.log(items.get(cardId).cantidad)
+        }
+
+        if(e.target.id == "restCantidad") {
+            const cardId = e.target.closest("#orderCard").dataset.id;
+            if(items.get(cardId).cantidad >= 2 ) {items.get(cardId).cantidad -= 1};
+            console.log(items.get(cardId).cantidad)
+        }
+        
+
     })
+// eventos aceptar orden-----------------------------------------------------
+
+btnAceptarOrden.addEventListener("click", async ()=>{
+  if(items.size > 0){
+    const orden = new Orden(store.current_user.id,  Array.from(items.values()));
+    console.log(orden )
+    await postOrden(orden);
+    
+    side.innerHTML = "";
+    items.clear();
+  }
+})
+
+
+//---------------------------------------------------------------------------- 
     renderProductosUser(grid)
     return section;
         
+} //final if current_user.rol == visitante
 
-
-    }
-
-    }
+ } //final función menuView()
 
  
 
