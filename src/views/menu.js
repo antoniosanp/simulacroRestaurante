@@ -65,10 +65,10 @@ export function menuView() {
 
         <!-- FILTROS -->
         <div class="d-flex justify-content-center gap-3 mb-4">
-            <button class="btn btn-outline-primary">Todo</button>
-            <button class="btn btn-outline-primary">Hamburguesa</button>
-            <button class="btn btn-outline-primary">Bebidas</button>
-            <button class="btn btn-outline-primary">Postres</button>
+            <button   id ="btnFiltro" data-filtro=""  class="btn btn-outline-primary">Todo</button>
+            <button  id ="btnFiltro" data-filtro="hamburguesa"   class="btn btn-outline-primary">Hamburguesa</button>
+            <button  id ="btnFiltro" data-filtro="bebida"    class="btn btn-outline-primary">Bebidas</button>
+            <button id ="btnFiltro" data-filtro="postre" class="btn btn-outline-primary">Postres</button>
         </div>
 
         <!-- CONTENIDO PRINCIPAL -->
@@ -162,6 +162,7 @@ export function menuView() {
     })
 // eventos aceptar orden-----------------------------------------------------
 
+
 btnAceptarOrden.addEventListener("click", async ()=>{
   if(items.size > 0){
     const orden = new Orden(store.current_user.id,  Array.from(items.values()));
@@ -174,6 +175,14 @@ btnAceptarOrden.addEventListener("click", async ()=>{
   }
 })
 
+//---------------------------------------------------------------------------
+// filtros
+
+section.addEventListener("click", (e)=>{
+    if (e.target.id === "btnFiltro") {
+        renderProductosUser(grid,e.target.dataset.filtro)    
+    }
+})
 
 //---------------------------------------------------------------------------- 
     renderProductosUser(grid)
@@ -185,11 +194,21 @@ btnAceptarOrden.addEventListener("click", async ()=>{
 
  
 
-function renderProductosAdmin(divisor){
+function renderProductosAdmin(divisor, filtro = ""){
     for (const p of store.productos.data){ divisor.appendChild(productoCardAdmin(p))}
     }
-function renderProductosUser(divisor){
-    for (const p of store.productos.data){ divisor.appendChild(productoCardUser(p))}
+function renderProductosUser(divisor, filtro = ""){
+    divisor.innerHTML = "";
+    for (const p of store.productos.data){ 
+        
+        if (filtro === "")
+        {divisor.appendChild(productoCardUser(p))}
+        if (filtro)
+        {
+            if (p.categoria === filtro) 
+            {divisor.appendChild(productoCardUser(p))}
+        }
+    }
     }
 
 function getProductById(id){
