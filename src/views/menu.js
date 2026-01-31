@@ -170,6 +170,7 @@ btnAceptarOrden.addEventListener("click", async ()=>{
     
     side.innerHTML = "";
     items.clear();
+    alert("Orden generada correctamente")
   }
 })
 

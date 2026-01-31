@@ -31,109 +31,101 @@
   ],
   "productos": [
     {
-      "id": "8e49",
-      "nombre": "limonada",
-      "precio": "122",
-      "categoria": "bebidas"
-    },
-    {
-      "id": "d66e",
-      "nombre": "hamburguesa doble carne",
-      "precio": "12423",
+      "id": "p001",
+      "nombre": "Hamburguesa Clásica",
+      "precio": 12000,
       "categoria": "hamburguesa"
     },
     {
-      "id": "5267",
-      "nombre": "red velvet",
-      "precio": "4996",
-      "categoria": "postres"
+      "id": "p002",
+      "nombre": "Hamburguesa Doble Queso",
+      "precio": 15000,
+      "categoria": "hamburguesa"
     },
     {
-      "id": "d9cc",
-      "nombre": "hamburguesa",
-      "precio": "42",
-      "categoria": "bebidas"
+      "id": "p003",
+      "nombre": "Hamburguesa BBQ",
+      "precio": 16500,
+      "categoria": "hamburguesa"
+    },
+    {
+      "id": "p004",
+      "nombre": "Papas Fritas",
+      "precio": 6000,
+      "categoria": "hamburguesa"
+    },
+    {
+      "id": "p005",
+      "nombre": "Gaseosa",
+      "precio": 4000,
+      "categoria": "bebida"
+    },
+    {
+      "id": "p006",
+      "nombre": "Limonada Natural",
+      "precio": 5000,
+      "categoria": "bebida"
+    },
+    {
+      "id": "p007",
+      "nombre": "Malteada de Chocolate",
+      "precio": 8000,
+      "categoria": "bebida"
+    },
+    {
+      "id": "p008",
+      "nombre": "Brownie con Helado",
+      "precio": 9000,
+      "categoria": "postre"
+    },
+    {
+      "id": "p009",
+      "nombre": "Cheesecake",
+      "precio": 9500,
+      "categoria": "postre"
+    },
+    {
+      "id": "p010",
+      "nombre": "Helado Sencillo",
+      "precio": 5500,
+      "categoria": "postre"
     }
   ],
   "ordenes": [
     {
-      "id": "0181",
+      "id": "9238",
       "userId": "f944",
       "items": [
         {
           "producto": {
-            "id": "8e49",
-            "nombre": "limonada",
-            "precio": "122",
-            "categoria": "bebidas"
-          },
-          "cantidad": 2
-        },
-        {
-          "producto": {
-            "id": "d66e",
-            "nombre": "hamburguesa doble carne",
-            "precio": "12423",
+            "id": "p001",
+            "nombre": "Hamburguesa Clásica",
+            "precio": 12000,
             "categoria": "hamburguesa"
           },
           "cantidad": 1
         },
         {
           "producto": {
-            "id": "5267",
-            "nombre": "red velvet",
-            "precio": "4996",
-            "categoria": "postres"
-          },
-          "cantidad": 1
-        }
-      ],
-      "estado": "pendiente",
-      "total": 17663
-    },
-    {
-      "id": "3fab",
-      "userId": "f944",
-      "items": [
-        {
-          "producto": {
-            "id": "8e49",
-            "nombre": "limonada",
-            "precio": "122",
-            "categoria": "bebidas"
+            "id": "p005",
+            "nombre": "Gaseosa",
+            "precio": 4000,
+            "categoria": "bebida"
           },
           "cantidad": 1
         },
         {
           "producto": {
-            "id": "5267",
-            "nombre": "red velvet",
-            "precio": "4996",
-            "categoria": "postres"
+            "id": "p009",
+            "nombre": "Cheesecake",
+            "precio": 9500,
+            "categoria": "postre"
           },
           "cantidad": 3
-        },
-        {
-          "producto": {
-            "id": "d9cc",
-            "nombre": "hamburguesa",
-            "precio": "42",
-            "categoria": "bebidas"
-          },
-          "cantidad": 1
-        },
-        {
-          "producto": {
-            "id": "d66e",
-            "nombre": "hamburguesa doble carne",
-            "precio": "12423",
-            "categoria": "hamburguesa"
-          },
-          "cantidad": 1
         }
       ],
       "estado": "pendiente",
-      "total": 27575
+      "total": 44500
     }
   ]
 }
