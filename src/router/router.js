@@ -10,6 +10,8 @@ import { nuevoProductoView } from "../views/administrarProducto.js";
 import { getCurrent_user } from "../store/auth.js";
 import { misOrdenesView } from "../views/misOrdenes.js";
 import { perfilView } from "../views/perfil.js";
+import { adminOrderCard } from "../components/adminOrdenCard.js";
+import { administrarOrdenView } from "../views/administrarOrden.js";
 
 export function router(){
     getCurrent_user()
@@ -50,6 +52,10 @@ export function router(){
         
         case "#/perfil":
             app.append(navbarView(), perfilView());
+            break;
+
+        case "#/ordenes":
+            app.append(navbarView(), administrarOrdenView());
             break;
 
         // case "#/administrar":

@@ -124,7 +124,7 @@
           "cantidad": 3
         }
       ],
-      "estado": "pendiente",
+      "estado": "finalizado",
       "total": 44500
     },
     {
@@ -167,7 +167,7 @@
           "cantidad": 1
         }
       ],
-      "estado": "pendiente",
+      "estado": "finalizado",
       "total": 6000
     },
     {
@@ -202,7 +202,7 @@
           "cantidad": 1
         }
       ],
-      "estado": "pendiente",
+      "estado": "en proceso",
       "total": 22000
     }
   ]
