@@ -132,6 +132,15 @@ export function menuView() {
 
     
     })
+
+
+
+
+    side.addEventListener("click", (e)=>{
+        const btn = e.target;
+        if(items.has(btn.dataset.id)) { items.delete(btn.dataset.id)}
+
+    })
     renderProductosUser(grid)
     return section;
         
