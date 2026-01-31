@@ -12,9 +12,11 @@ export function productoCardUser(producto) {
             <h6 class="mb-1">${producto.categoria}</h6>
             <small class="text-muted">$${producto.precio}</small>
             <br>
-            <button type="button" class="btn btn-success">Comprar</button>
+            <button  data-id="${producto.id}"  id="btnComprar" type="button" class="btn btn-success">Comprar</button>
         </div>
     `;
-    console.log(div.dataset.id)
+    
+
     return div;
 }
+

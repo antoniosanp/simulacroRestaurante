@@ -1,7 +1,6 @@
 import { store } from "../store/store.js";
 import { validarLogin } from "../store/auth.js";
 import { iniciarSesion } from "../store/auth.js";
-import { getCurrent_user } from "../store/auth.js";
 
 export function loginView(){
     const loginDiv = document.createElement("div");
