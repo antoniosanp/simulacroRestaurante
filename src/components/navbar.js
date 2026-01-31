@@ -23,7 +23,7 @@ export function navbarView() {
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#/ordenes">Mis órdenes</a>
+                    <a class="nav-link" href="#/misOrdenes">Mis órdenes</a>
                 </li>
 
                 <li class="nav-item">

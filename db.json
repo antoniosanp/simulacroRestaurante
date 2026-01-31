@@ -126,6 +126,84 @@
       ],
       "estado": "pendiente",
       "total": 44500
+    },
+    {
+      "id": "4c47",
+      "userId": "f944",
+      "items": [
+        {
+          "producto": {
+            "id": "p001",
+            "nombre": "Hamburguesa Clásica",
+            "precio": 12000,
+            "categoria": "hamburguesa"
+          },
+          "cantidad": 3
+        },
+        {
+          "producto": {
+            "id": "p005",
+            "nombre": "Gaseosa",
+            "precio": 4000,
+            "categoria": "bebida"
+          },
+          "cantidad": 1
+        }
+      ],
+      "estado": "pendiente",
+      "total": 40000
+    },
+    {
+      "id": "4da7",
+      "userId": "f944",
+      "items": [
+        {
+          "producto": {
+            "id": "p004",
+            "nombre": "Papas Fritas",
+            "precio": 6000,
+            "categoria": "hamburguesa"
+          },
+          "cantidad": 1
+        }
+      ],
+      "estado": "pendiente",
+      "total": 6000
+    },
+    {
+      "id": "69da",
+      "userId": "bf6b",
+      "items": [
+        {
+          "producto": {
+            "id": "p001",
+            "nombre": "Hamburguesa Clásica",
+            "precio": 12000,
+            "categoria": "hamburguesa"
+          },
+          "cantidad": 1
+        },
+        {
+          "producto": {
+            "id": "p004",
+            "nombre": "Papas Fritas",
+            "precio": 6000,
+            "categoria": "hamburguesa"
+          },
+          "cantidad": 1
+        },
+        {
+          "producto": {
+            "id": "p005",
+            "nombre": "Gaseosa",
+            "precio": 4000,
+            "categoria": "bebida"
+          },
+          "cantidad": 1
+        }
+      ],
+      "estado": "pendiente",
+      "total": 22000
     }
   ]
 }

@@ -8,6 +8,8 @@ import { menuView } from "../views/menu.js";
 import { notfoundView } from "../views/notfound.js";
 import { nuevoProductoView } from "../views/administrarProducto.js";
 import { getCurrent_user } from "../store/auth.js";
+import { misOrdenesView } from "../views/misOrdenes.js";
+import { perfilView } from "../views/perfil.js";
 
 export function router(){
     getCurrent_user()
@@ -41,6 +43,13 @@ export function router(){
 
         case "#/productos":
             app.append(navbarView(), nuevoProductoView());
+            break;
+        case "#/misOrdenes":
+            app.append(navbarView(),misOrdenesView());
+            break;
+        
+        case "#/perfil":
+            app.append(navbarView(), perfilView());
             break;
 
         // case "#/administrar":
