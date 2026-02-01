@@ -1,3 +1,4 @@
+//ap.js
 import { iniciarDatos } from "./src/store/auth.js";
 import { router } from "./src/router/router.js";
 

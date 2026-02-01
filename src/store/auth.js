@@ -1,3 +1,4 @@
+//auth.js
 import { store } from "./store.js";
 import { getUsers } from "../services/users.services.js";
 import { getProductos } from "../services/productos.sercives.js";

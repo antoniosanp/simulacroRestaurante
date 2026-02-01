@@ -1,3 +1,4 @@
+//administrarOrden.js
 import { adminOrderCard } from "../components/adminOrdenCard.js";
 import { store } from "../store/store.js";
 import { pathOrden } from "../services/ordenes.services.js";

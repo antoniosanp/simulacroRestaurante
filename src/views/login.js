@@ -1,3 +1,4 @@
+//login.js
 import { store } from "../store/store.js";
 import { validarLogin } from "../store/auth.js";
 import { iniciarSesion } from "../store/auth.js";

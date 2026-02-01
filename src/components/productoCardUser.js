@@ -1,4 +1,4 @@
-
+//productoCardUser.js
 export function productoCardUser(producto) {
 
     const div = document.createElement("div");

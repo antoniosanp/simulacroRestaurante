@@ -1,4 +1,5 @@
-import { httpGet, httpPost, httpPut, httpPatch, httpDelete } from "./http.js";
+//users.services.js
+import { httpGet, httpPost } from "./http.js";
 import { store } from "../store/store.js";
 
 export async function getUsers(){

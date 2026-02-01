@@ -1,3 +1,4 @@
+//perdil.js
 import { store } from "../store/store.js";
 
 export function perfilView(){

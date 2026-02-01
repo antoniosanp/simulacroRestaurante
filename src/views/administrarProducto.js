@@ -1,3 +1,4 @@
+//administrarProducto.js
 import { postProducto } from "../services/productos.sercives.js";
 import { Producto } from "../store/store.js";
 export function nuevoProductoView() {
@@ -51,8 +52,8 @@ export function nuevoProductoView() {
                                     Selecciona una categoría
                                 </option>
                                 <option value="hamburguesa">Hamburguesa</option>
-                                <option value="bebidas">Bebidas</option>
-                                <option value="postres">Postres</option>
+                                <option value="bebida">Bebidas</option>
+                                <option value="postre">Postres</option>
                             </select>
                         </div>
 

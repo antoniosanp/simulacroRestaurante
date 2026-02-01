@@ -1,3 +1,4 @@
+//router.js
 import { loginView } from "../views/login.js";
 import { registerView } from "../views/register.js";
 import { app } from "../../app.js";
@@ -10,7 +11,6 @@ import { nuevoProductoView } from "../views/administrarProducto.js";
 import { getCurrent_user } from "../store/auth.js";
 import { misOrdenesView } from "../views/misOrdenes.js";
 import { perfilView } from "../views/perfil.js";
-import { adminOrderCard } from "../components/adminOrdenCard.js";
 import { administrarOrdenView } from "../views/administrarOrden.js";
 
 export function router(){
@@ -57,16 +57,6 @@ export function router(){
         case "#/ordenes":
             app.append(navbarView(), administrarOrdenView());
             break;
-
-        // case "#/administrar":
-        //     console.log("en administrar");
-        //     app.append(navbar(), administrarView());
-        //     break;
-
-        // case "#/productos":
-        //     console.log("en producto");
-        //     app.append(navbar(), productosView());
-        //     break;
 
 
         case "#/logout":

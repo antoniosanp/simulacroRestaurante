@@ -27,6 +27,13 @@
       "email": "calvito@gmail.com",
       "password": "1",
       "rol": "visitante"
+    },
+    {
+      "id": "2ee7",
+      "nombre": "angelo",
+      "email": "noera@elproposito.com",
+      "password": "1",
+      "rol": "visitante"
     }
   ],
   "productos": [
@@ -89,6 +96,12 @@
       "nombre": "Helado Sencillo",
       "precio": 5500,
       "categoria": "postre"
+    },
+    {
+      "id": "df0a",
+      "nombre": "arroz chino",
+      "precio": 32333,
+      "categoria": "bebida"
     }
   ],
   "ordenes": [
@@ -124,7 +137,7 @@
           "cantidad": 3
         }
       ],
-      "estado": "finalizado",
+      "estado": "pendiente",
       "total": 44500
     },
     {
@@ -204,6 +217,76 @@
       ],
       "estado": "en proceso",
       "total": 22000
+    },
+    {
+      "id": "0218",
+      "userId": "bf6b",
+      "items": [
+        {
+          "producto": {
+            "id": "df0a",
+            "nombre": "arroz chino",
+            "precio": 32333,
+            "categoria": "bebidas"
+          },
+          "cantidad": 3
+        },
+        {
+          "producto": {
+            "id": "p001",
+            "nombre": "Hamburguesa Clásica",
+            "precio": 12000,
+            "categoria": "hamburguesa"
+          },
+          "cantidad": 1
+        }
+      ],
+      "estado": "pendiente",
+      "total": 108999
+    },
+    {
+      "id": "b68a",
+      "userId": "2ee7",
+      "items": [
+        {
+          "producto": {
+            "id": "p008",
+            "nombre": "Brownie con Helado",
+            "precio": 9000,
+            "categoria": "postre"
+          },
+          "cantidad": 6
+        },
+        {
+          "producto": {
+            "id": "p001",
+            "nombre": "Hamburguesa Clásica",
+            "precio": 12000,
+            "categoria": "hamburguesa"
+          },
+          "cantidad": 1
+        },
+        {
+          "producto": {
+            "id": "p002",
+            "nombre": "Hamburguesa Doble Queso",
+            "precio": 15000,
+            "categoria": "hamburguesa"
+          },
+          "cantidad": 1
+        },
+        {
+          "producto": {
+            "id": "p003",
+            "nombre": "Hamburguesa BBQ",
+            "precio": 16500,
+            "categoria": "hamburguesa"
+          },
+          "cantidad": 1
+        }
+      ],
+      "estado": "en proceso",
+      "total": 97500
     }
   ]
 }

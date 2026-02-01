@@ -1,3 +1,4 @@
+//menu.js
 import { store } from "../store/store.js";
 import { productoCardAdmin } from "../components/productoCardAdmin.js";
 import { productoCardUser } from "../components/productoCardUser.js";

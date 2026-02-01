@@ -1,4 +1,4 @@
-
+//productoCardAdmin.js
 export function productoCardAdmin(producto) {
 
     const div = document.createElement("div");

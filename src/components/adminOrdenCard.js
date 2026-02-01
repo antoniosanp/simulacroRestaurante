@@ -1,3 +1,4 @@
+//adminOrdenCard.js
 export function adminOrderCard(orden){
     const div = document.createElement("div");
     div.id = "orderCard"

@@ -1,3 +1,4 @@
+//navbar.js
 import { store } from "../store/store.js";
 
 export function navbarView() {
